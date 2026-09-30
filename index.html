@@ -11,7 +11,13 @@
   <main class="app">
     <header class="app-header">
       <p class="eyebrow">把注意力留給重要的事</p>
-      <h1>今日待辦</h1>
+      <div class="title-row">
+        <h1>今日待辦</h1>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+          <span id="theme-icon" aria-hidden="true">🌙</span>
+          <span id="theme-label">深色模式</span>
+        </button>
+      </div>
       <p class="intro">一件一件完成，讓今天更有條理。</p>
     </header>
 
@@ -28,6 +34,12 @@
       >
       <button class="btn-add" type="submit"><span aria-hidden="true">＋</span> 新增</button>
     </form>
+
+    <nav class="filter-bar" aria-label="篩選待辦事項">
+      <button class="filter-button" type="button" data-filter="all" aria-pressed="true">全部</button>
+      <button class="filter-button" type="button" data-filter="active" aria-pressed="false">未完成</button>
+      <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">已完成</button>
+    </nav>
 
     <section class="list-section" aria-label="待辦事項">
       <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
