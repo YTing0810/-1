@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f5ef">
+  <title>今日待辦</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <p class="eyebrow">把注意力留給重要的事</p>
+      <h1>今日待辦</h1>
+      <p class="intro">一件一件完成，讓今天更有條理。</p>
+    </header>
+
+    <!-- 新增待辦事項的表單 -->
+    <form id="todo-form" class="todo-form" autocomplete="off">
+      <label class="sr-only" for="todo-input">待辦事項內容</label>
+      <input
+        id="todo-input"
+        class="todo-input"
+        type="text"
+        placeholder="新增一件要完成的事…"
+        maxlength="160"
+        required
+      >
+      <button class="btn-add" type="submit"><span aria-hidden="true">＋</span> 新增</button>
+    </form>
+
+    <section class="list-section" aria-label="待辦事項">
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+      <p id="empty-state" class="empty-state" hidden>還沒有任何待辦事項,新增一個吧!</p>
+    </section>
+
+    <footer class="app-footer">
+      <span id="remaining-count" aria-live="polite">未完成:0 項</span>
+      <span class="footer-note">每一步都算數</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
