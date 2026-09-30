@@ -301,12 +301,43 @@ h1 {
 .app-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 12px;
   margin-top: 20px;
   padding-top: 16px;
   color: var(--muted);
   border-top: 1px solid var(--line);
   font-size: 0.82rem;
+}
+
+.footer-actions {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-clear-completed {
+  padding: 6px 9px;
+  color: var(--danger);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  font: inherit;
+  font-size: 0.76rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.btn-clear-completed:not(:disabled):hover {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+}
+
+.btn-clear-completed:disabled {
+  color: var(--placeholder);
+  cursor: not-allowed;
 }
 
 .footer-note {
@@ -366,6 +397,10 @@ h1 {
 
   .btn-add {
     width: 100%;
+  }
+
+  .footer-note {
+    display: none;
   }
 }
 
