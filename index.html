@@ -47,7 +47,16 @@
     </section>
 
     <footer class="app-footer">
-      <span id="remaining-count" aria-live="polite">未完成:0 項</span>
+      <div class="footer-actions">
+        <span id="remaining-count" aria-live="polite">未完成:0 項</span>
+        <button
+          id="clear-completed"
+          class="btn-clear-completed"
+          type="button"
+          aria-label="清除所有已完成的待辦事項"
+          disabled
+        >清除已完成</button>
+      </div>
       <span class="footer-note">每一步都算數</span>
     </footer>
   </main>
